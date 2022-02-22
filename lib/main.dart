@@ -77,11 +77,14 @@ class MyApp extends StatelessWidget {
                             )
                           ],
                         ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Text("Transfer"),
-                          ],
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Text("Transfer"),
+                            ],
+                          ),
                         ),
                       ],
                     ),
