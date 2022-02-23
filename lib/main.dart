@@ -64,8 +64,8 @@ class MyApp extends StatelessWidget {
                               width: 473,
                               decoration: BoxDecoration(
                                 image: const DecorationImage(
-                                  image:
-                                      NetworkImage("https://picsum.photos/200"),
+                                  image: NetworkImage(
+                                      "https://i.picsum.photos/id/154/3264/2176.jpg?hmac=a4Q6dBKGy7G27ic7K1sEPr-KzMigvl-MQsZUEX9iFxM"),
                                   fit: BoxFit.fitWidth,
                                 ),
                               ),
@@ -134,16 +134,23 @@ class MyApp extends StatelessWidget {
                     ),
                   ),
                   child: Row(
+                    // mainAxisSize: MainAxisSize.min,
                     children: [
                       Column(
                         children: [
+                          // Expanded(
+                          //   child: Image.network(
+                          //     "https://i.picsum.photos/id/1058/4608/3072.jpg?hmac=kfHIsJ4T3b-ily0CcdGESnuC4wwOPtnOQpcICheyvFQ",
+                          //     fit: BoxFit.fitWidth,
+                          //   ),
+                          // ),
                           Container(
-                            height: 150,
+                            height: 140,
                             width: 216,
                             decoration: BoxDecoration(
                               image: const DecorationImage(
-                                image:
-                                    NetworkImage("https://picsum.photos/200"),
+                                image: NetworkImage(
+                                    "https://i.picsum.photos/id/1058/4608/3072.jpg?hmac=kfHIsJ4T3b-ily0CcdGESnuC4wwOPtnOQpcICheyvFQ"),
                                 fit: BoxFit.fitWidth,
                               ),
                             ),
