@@ -26,7 +26,10 @@ class MyApp extends StatelessWidget {
                 children: [
                   Column(
                     children: [
-                      Text("BERITA TERBARU"),
+                      Text("BERITA TERBARU",
+                          style: TextStyle(
+                            fontWeight: FontWeight.w600,
+                          )),
                     ],
                   ),
                   const Padding(
@@ -34,7 +37,10 @@ class MyApp extends StatelessWidget {
                   ),
                   Column(
                     children: [
-                      Text("PERTANDINGAN HARI INI"),
+                      Text("PERTANDINGAN HARI INI",
+                          style: TextStyle(
+                            fontWeight: FontWeight.w600,
+                          )),
                     ],
                   ),
                 ],
@@ -43,52 +49,152 @@ class MyApp extends StatelessWidget {
                 children: [
                   Container(
                     decoration: BoxDecoration(
-                      color: Colors.purple,
+                      border: Border.all(
+                        color: Color.fromARGB(255, 121, 24, 92),
+                        width: 2,
+                      ),
                     ),
                     child: Column(
-                      mainAxisSize: MainAxisSize.min,
                       children: [
-                        Row(
+                        Column(
+                          //Pertama
                           children: [
-                            Image.network(
-                              "https://picsum.photos/200",
-                              fit: BoxFit.fitWidth,
+                            Container(
+                              height: 200,
+                              width: 473,
+                              decoration: BoxDecoration(
+                                image: const DecorationImage(
+                                  image:
+                                      NetworkImage("https://picsum.photos/200"),
+                                  fit: BoxFit.fitWidth,
+                                ),
+                              ),
                             ),
                           ],
                         ),
-                        Row(
+                        Column(
+                          //Kedua
                           children: [
                             Container(
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                              ),
-                              child: Padding(
-                                padding: const EdgeInsets.all(10.0),
-                                child: Column(
-                                  children: [
-                                    Text("Costa Mendekat Ke Palmeiras",
-                                        style: TextStyle(
-                                          fontSize: 15,
-                                          fontWeight: FontWeight.bold,
-                                        )),
-                                  ],
+                                height: 40,
+                                width: 469,
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
                                 ),
-                              ),
-                            )
+                                child: Center(
+                                  child: Text("Costa Mendekat Ke Palmeiras",
+                                      style: TextStyle(
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.bold,
+                                      )),
+                                )),
                           ],
                         ),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              Text("Transfer"),
-                            ],
-                          ),
+                        Row(
+                          //Ketiga
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Container(
+                                height: 50,
+                                width: 473,
+                                decoration: BoxDecoration(
+                                  color: Color.fromARGB(255, 236, 31, 175),
+                                  border: Border.all(
+                                    color: Color.fromARGB(255, 236, 31, 175),
+                                    width: 1,
+                                  ),
+                                ),
+                                child: Padding(
+                                  padding: const EdgeInsets.all(10.0),
+                                  child: Row(
+                                    children: [
+                                      Text("Transfer",
+                                          style: TextStyle(
+                                            fontSize: 17,
+                                            fontWeight: FontWeight.w600,
+                                          )),
+                                    ],
+                                  ),
+                                )),
+                          ],
                         ),
                       ],
                     ),
                   )
+                ],
+              ),
+              Padding(padding: const EdgeInsets.only(top: 10)),
+              Row(children: [
+                Container(
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    border: Border.all(
+                      color: Color.fromARGB(255, 104, 103, 103),
+                      width: 2,
+                    ),
+                  ),
+                  child: Row(
+                    children: [
+                      Column(
+                        children: [
+                          Container(
+                            height: 150,
+                            width: 216,
+                            decoration: BoxDecoration(
+                              image: const DecorationImage(
+                                image:
+                                    NetworkImage("https://picsum.photos/200"),
+                                fit: BoxFit.fitWidth,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(15.0),
+                        child: Column(
+                          children: [
+                            Text("Pique Bilang Wasit Untungkan",
+                                style: TextStyle(
+                                  fontSize: 17,
+                                  fontWeight: FontWeight.w600,
+                                )),
+                            Text("Madrid, Koeman Tepok Jidat",
+                                style: TextStyle(
+                                  fontSize: 17,
+                                  fontWeight: FontWeight.w600,
+                                )),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ]),
+              Row(
+                children: [
+                  Container(
+                      height: 50,
+                      width: 477,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        border: Border.all(
+                          color: Color.fromARGB(255, 104, 103, 103),
+                          width: 1,
+                        ),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: Row(
+                          children: [
+                            Text("Barcelona Feb 13, 2021",
+                                style: TextStyle(
+                                  fontSize: 17,
+                                  fontWeight: FontWeight.w600,
+                                )),
+                          ],
+                        ),
+                      )),
                 ],
               ),
             ],
