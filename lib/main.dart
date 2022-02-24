@@ -10,6 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: 'Flutter Basic Widget',
       theme: ThemeData(
         primarySwatch: Colors.red,
       ),
@@ -60,16 +61,20 @@ class MyApp extends StatelessWidget {
                           //Pertama
                           children: [
                             Container(
-                              height: 200,
+                              height: 180,
                               width: 473,
                               decoration: BoxDecoration(
                                 image: const DecorationImage(
-                                  image: NetworkImage(
-                                      "https://i.picsum.photos/id/154/3264/2176.jpg?hmac=a4Q6dBKGy7G27ic7K1sEPr-KzMigvl-MQsZUEX9iFxM"),
+                                  image:
+                                      AssetImage("assets/images/gambar1.jpg"),
                                   fit: BoxFit.fitWidth,
                                 ),
                               ),
                             ),
+                            // Image.asset(
+                            //   "assets/images/gambar1.jpg",
+                            //   fit: BoxFit.fill,
+                            // )
                           ],
                         ),
                         Column(
